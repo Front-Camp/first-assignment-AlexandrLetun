@@ -7,7 +7,10 @@
 * max([-1, 0]);   // 0
 */
 const max = arr => {
-  return Math.max(arr);
+  const res = arr.filter((elem) => {
+    return Number.isInteger(elem) && Number.isFinite(elem) && !isNaN(elem);
+  })
+  return Math.max(res);
 };
 
 export default max;
