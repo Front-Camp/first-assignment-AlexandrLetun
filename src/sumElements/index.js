@@ -11,7 +11,12 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+  return array.reduce((acc, elem) =>{
+    if(typeof elem === 'number' && isFinite(elem) && Number.isInteger(elem)) {
+      return acc+elem;
+    }
+    return 0;
+  }, 0)
 };
 
 export default sumElements;

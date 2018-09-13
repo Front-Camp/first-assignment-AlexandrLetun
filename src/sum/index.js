@@ -10,7 +10,10 @@
 * sum(-1, 13); // 12
 */
 const sum = (a, b) => {
-  /* your logic here...*/
+  if(Number.isInteger(a) && Number.isInteger(b)){
+    return a+b;
+  }
+return 0;
 };
 
 export default sum;
