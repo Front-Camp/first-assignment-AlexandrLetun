@@ -8,7 +8,10 @@
  * isObject(null); // false
  */
 const isObject = data => {
-  return data instanceof Object;
+  if(data instanceof Object && !(data.constructor.toString().indexOf('Array')>0)){
+    return true;
+  }
+  return false;
 };
 
 export default isObject;
